@@ -6,7 +6,7 @@ module.exports = (router) => {
   const query = {
     isActive: { $eq: true },
   };
-  router.get('/projects', (req, res) => {
+  router.get('/project', (req, res) => {
     Project.find(query)
       .sort({ 'name': 1 })
       .exec()
@@ -19,7 +19,7 @@ module.exports = (router) => {
         }));
   });
 
-  router.post('/standup', (req, res) => {
+  router.post('/project', (req, res) => {
     const project = new Project(req.body);
     project.save((err, project) => {
       if (err) {

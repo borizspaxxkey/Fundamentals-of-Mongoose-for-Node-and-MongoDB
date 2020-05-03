@@ -22,7 +22,8 @@ app.use((req, res) => {
   res.json(err);
 });
 
-mongoose.connect('mongodb://localhost:27017/virtualstandups', { useNewUrlParser: true });
+mongoose.connect('mongodb://spaxxkey:91408916B.c@virtualstandup-shard-00-00-guo2k.azure.mongodb.net:27017,virtualstandup-shard-00-01-guo2k.azure.mongodb.net:27017,virtualstandup-shard-00-02-guo2k.azure.mongodb.net:27017/test?ssl=true&replicaSet=virtualstandup-shard-0&authSource=admin&retryWrites=true&w=majority', { useNewUrlParser: true });
+
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', () => {

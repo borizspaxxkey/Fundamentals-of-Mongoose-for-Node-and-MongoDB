@@ -18,7 +18,7 @@ module.exports = (router) => {
       });
   });
 
-  router.post('/standup', (req, res) => {
+  router.post('/team', (req, res) => {
     const member = new TeamMember(req.body);
     member.save((err, member) => {
       if (err) {
