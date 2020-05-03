@@ -28,3 +28,5 @@ const zevia = new Person({
 firstName:'Zevia',
 lastName: 'Cola'
 });
+
+yarn serve //to serve vue app

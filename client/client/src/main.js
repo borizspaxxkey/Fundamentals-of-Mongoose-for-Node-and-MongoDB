@@ -17,7 +17,7 @@ Vue.use(Vuetify)
 
 // Setup axios to be available globally through Vue
 Vue.axios = Vue.prototype.$http = axios.create({
-  baseURL: 'http://localhost:8081/api'
+  baseURL: 'http://localhost:55065/api'
 })
 
 new Vue({
